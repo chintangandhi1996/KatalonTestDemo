@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TestCase3_Script_Excel</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>aeee9ffb-d2ed-4374-9ca8-3c7669728b68</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>b89c436b-f59b-48ef-8fba-5974b52a88d9</id>
+      <masked>false</masked>
+      <name>Username</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>7fc08847-d4ec-4ebd-b748-b5a3a5c5cda7</id>
+      <masked>false</masked>
+      <name>Password</name>
+   </variable>
+</TestCaseEntity>

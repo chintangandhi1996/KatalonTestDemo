@@ -15,21 +15,19 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('')
+WebUI.openBrowser("https://exxat-uat-apps.azurewebsites.net/Fusion/Home/Launch")
 
 WebUI.maximizeWindow()
 
-WebUI.navigateToUrl('https://exxat-uat-apps.azurewebsites.net/Fusion/Account/Login')
+for(def i = 1 ; i <= findTestData("TestData1").getRowNumbers() ; i++ ){
 
-WebUI.setText(findTestObject('Test2_manual/Page_Login/input_Username_Username'), 'exxat')
+	WebUI.setText(findTestObject('Object Repository/Test2_manual/Page_Login/input_Username_Username'), findTestData("TestData1").getValue(1,i) )
 
-WebUI.setText(findTestObject('Test2_manual/Page_Login/input_Password_Password'), 'Uat@Password789')
-
-WebUI.click(findTestObject('Test2_manual/Page_Login/i_Login_m-icon-swapright m-icon-white'))
-
-WebUI.focus(findTestObject('Test2_manual/Page_Launch/a_Exxat LLC'))
-
-WebUI.click(findTestObject('Test2_manual/Page_Launch/a_Log Out'))
+	WebUI.setText(findTestObject('Object Repository/Test2_manual/Page_Login/input_Password_Password'), findTestData("TestData1").getValue(2,i))
+	
+	WebUI.setText(findTestObject('Object Repository/Test1_Recorder/Page_Login/input_Username_Username'), findTestData("TestData2").getValue(1, 1))
+	
+	Thread.sleep(5000)
+}
 
 WebUI.closeBrowser()
-
